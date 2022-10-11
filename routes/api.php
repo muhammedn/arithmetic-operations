@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['prefix' => 'v1'], function(){
+
+    Route::get('calculate/{num1}/{num2}' , [\App\Http\Controllers\Api\CalculatingController::class , 'calculate']);
+    Route::get('calculate' , [\App\Http\Controllers\Api\CalculatingController::class , 'validateNonValues']);
+
 });
