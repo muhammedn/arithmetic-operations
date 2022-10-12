@@ -8,8 +8,6 @@ use Illuminate\Http\Response;
 
 class CalculatingController extends Controller implements CalculateInterface
 {
-    //
-
 
     /**
      * Make arithmetic operations
